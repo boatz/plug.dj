@@ -17,7 +17,7 @@
  * TERMS OF REPRODUCTION USE
  *
  * 1. Provide a link back to the original repository (this repository), as
- *   	in, https://github.com/ConnerGDavis/Plugbot, that is well-visible
+ * 		in, https://github.com/ConnerGDavis/Plugbot, that is well-visible
  * 		wherever the source is being reproduced.  For example, should you 
  * 		display it on a website, you should provide a link above/below that
  *		which the users use, titled something such as "ORIGINAL AUTHOR".  
@@ -178,6 +178,20 @@ function promptCustomUsername() {
  */
 function initUIListeners()
 {	
+	/*
+	 * Toggle userlist.
+	 */
+	$("#plugbot-btn-userlist").on("click", function() {
+		userList = !userList;
+		$(this).css("color", userList ? "#3FFF00" : "#ED1C24");
+		$("#plugbot-userlist").css("visibility", userList ? ("visible") : ("hidden"));
+		if (!userList) {
+			$("#plugbot-userlist").empty();
+		} else {
+			populateUserlist();
+		}
+	});
+
 	/*
 	 * Toggle auto-woot.
 	 */
