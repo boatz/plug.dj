@@ -179,20 +179,6 @@ function promptCustomUsername() {
 function initUIListeners()
 {	
 	/*
-	 * Toggle userlist.
-	 */
-	$("#plugbot-btn-userlist").on("click", function() {
-		userList = !userList;
-		$(this).css("color", userList ? "#3FFF00" : "#ED1C24");
-		$("#plugbot-userlist").css("visibility", userList ? ("visible") : ("hidden"));
-		if (!userList) {
-			$("#plugbot-userlist").empty();
-		} else {
-			populateUserlist();
-		}
-	});
-
-	/*
 	 * Toggle auto-woot.
 	 */
 	$("#plugbot-btn-woot").on("click", function() {
