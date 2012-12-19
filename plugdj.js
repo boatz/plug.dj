@@ -41,7 +41,7 @@
 /*
  * Whether the user has currently enabled auto-woot. 
  */
-var autowoot = true;
+var autowoot = false;
 /*
  * Whether the user has currently enabled auto-queueing. 
  */
